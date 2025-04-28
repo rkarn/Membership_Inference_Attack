@@ -18,7 +18,7 @@ To reproduce the outcomes given for ISCAS85+EPFL benchmark, please run the parse
 - Pytorch
 - Sklearn
 
-#### Variants of HDC (Hyperdimensional Computing (HDC) Optimization Techniques)
+### For reading only: Variants of HDC (Hyperdimensional Computing (HDC) Optimization Techniques)
 
 ##### 1. Iterative Retraining and Regenerative Training
 **Concept**: Iteratively refine the class hypervectors by retraining the model on misclassified samples or regenerating the hypervectors to better represent the data.
