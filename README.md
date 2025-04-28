@@ -17,6 +17,8 @@ To reproduce the outcomes given for ISCAS85+EPFL benchmark, please run the parse
 - Keras
 - Pytorch
 - Sklearn
+- ISCAS85+EPFL Benchmark Suite from `https://github.com/jpsety/verilog_benchmark_circuits`
+- MNIST dataset
 
 ### For reading only: Variants of HDC (Hyperdimensional Computing (HDC) Optimization Techniques)
 
