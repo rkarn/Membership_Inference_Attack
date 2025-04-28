@@ -18,40 +18,62 @@ To reproduce the outcomes given for ISCAS85+EPFL benchmark, please run the parse
 - Pytorch
 - Sklearn
 
-#### Variants of HDC
-1. Iterative Retraining and Regenerative Training
-Concept: Iteratively refine the class hypervectors by retraining the model on misclassified samples or regenerating the hypervectors to better represent the data.
+#### Variants of HDC (Hyperdimensional Computing (HDC) Optimization Techniques)
 
-Implementation: After the initial training, identify misclassified samples and update the class hypervectors by incorporating these samples with higher weights. This can help the model adapt to challenging cases.
+##### 1. Iterative Retraining and Regenerative Training
+**Concept**: Iteratively refine the class hypervectors by retraining the model on misclassified samples or regenerating the hypervectors to better represent the data.
 
-2. Adaptive Encoding
-Concept: Use adaptive encoding techniques to better capture the structure of the data. For example, instead of random projections, use data-driven projections that preserve important features.
+**Implementation**:
+- After the initial training, identify misclassified samples
+- Update the class hypervectors by incorporating these samples with higher weights
+- Helps the model adapt to challenging cases
 
-Implementation: Apply Principal Component Analysis (PCA) or other dimensionality reduction techniques to preprocess the data before encoding it into hypervectors. This ensures that the most informative features are emphasized.
+##### 2. Adaptive Encoding
+**Concept**: Use adaptive encoding techniques to better capture the structure of the data (e.g., data-driven projections instead of random projections).
 
-3. Hybrid Models
-Concept: Combine HDC with other machine learning models to leverage their strengths. For instance, use a neural network to preprocess the data and then encode the output into hypervectors.
+**Implementation**:
+- Apply Principal Component Analysis (PCA) or other dimensionality reduction techniques
+- Preprocess the data before encoding into hypervectors
+- Ensures most informative features are emphasized
 
-Implementation: Train a lightweight neural network to extract features from the data, and then use these features as input to the HDC model. This hybrid approach can significantly boost accuracy while retaining the efficiency of HDC.
+##### 3. Hybrid Models
+**Concept**: Combine HDC with other machine learning models to leverage their strengths.
 
-4. Higher-Order Representations
-Concept: Incorporate higher-order interactions between features by binding multiple features together before encoding.
+**Implementation**:
+- Train a lightweight neural network for feature extraction
+- Use the neural network's output as input to HDC model
+- Retains HDC efficiency while boosting accuracy
 
-Implementation: Instead of encoding each feature independently, bind groups of features together using element-wise multiplication or XOR operations. This captures interactions between features and can improve classification performance.
+##### 4. Higher-Order Representations
+**Concept**: Incorporate higher-order interactions between features.
 
-5. Dimensionality Optimization
-Concept: Optimize the dimensionality of the hypervectors to balance accuracy and computational efficiency.
+**Implementation**:
+- Bind groups of features together before encoding
+- Use element-wise multiplication or XOR operations
+- Captures feature interactions for better classification
 
-Implementation: Experiment with different dimensionalities (e.g., 10,000, 20,000, or higher) to find the optimal trade-off for your dataset. Higher dimensions often improve accuracy but increase computational cost.
+##### 5. Dimensionality Optimization
+**Concept**: Optimize hypervector dimensionality for accuracy/efficiency trade-off.
 
-6. Error-Correcting Codes
-Concept: Use error-correcting codes to make the model more robust to noise and misclassifications.
+**Implementation**:
+- Experiment with different dimensions (10K, 20K, etc.)
+- Higher dimensions improve accuracy but increase compute cost
+- Find optimal balance for specific dataset
 
-Implementation: Encode the class labels using error-correcting codes and train the model to predict these codes instead of the raw labels. This adds redundancy and improves robustness.
+##### 6. Error-Correcting Codes
+**Concept**: Improve robustness to noise and misclassifications.
 
-7. MicroHD Optimization
-Concept: Use accuracy-driven optimization techniques like MicroHD to iteratively tune hyperparameters and encoding functions.
+**Implementation**:
+- Encode class labels using error-correcting codes
+- Train model to predict these codes instead of raw labels
+- Adds redundancy for better fault tolerance
 
-Implementation: Apply MicroHD to systematically explore the hyperparameter space (e.g., dimensionality, encoding functions) and optimize the model for accuracy while maintaining efficiency.
+##### 7. MicroHD Optimization
+**Concept**: Systematic hyperparameter tuning for accuracy.
+
+**Implementation**:
+- Apply MicroHD to explore hyperparameter space
+- Optimize dimensionality, encoding functions etc.
+- Maintain efficiency while maximizing accuracy
 
 
