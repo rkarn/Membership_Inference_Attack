@@ -32,42 +32,54 @@ To reproduce the outcomes given for ISCAS85+EPFL benchmark, please run the parse
 - Helps the model adapt to challenging cases
 
 2. `Adaptive Encoding`
+
 **Concept**: Use adaptive encoding techniques to better capture the structure of the data (e.g., data-driven projections instead of random projections).
+
 **Implementation**:
 - Apply Principal Component Analysis (PCA) or other dimensionality reduction techniques
 - Preprocess the data before encoding into hypervectors
 - Ensures most informative features are emphasized
 
 3. `Hybrid Models`
+
 **Concept**: Combine HDC with other machine learning models to leverage their strengths.
+
 **Implementation**:
 - Train a lightweight neural network for feature extraction
 - Use the neural network's output as input to HDC model
 - Retains HDC efficiency while boosting accuracy
 
 4. `Higher-Order Representations`
+
 **Concept**: Incorporate higher-order interactions between features.
+
 **Implementation**:
 - Bind groups of features together before encoding
 - Use element-wise multiplication or XOR operations
 - Captures feature interactions for better classification
 
 5. `Dimensionality Optimization`
+
 **Concept**: Optimize hypervector dimensionality for accuracy/efficiency trade-off.
+
 **Implementation**:
 - Experiment with different dimensions (10K, 20K, etc.)
 - Higher dimensions improve accuracy but increase compute cost
 - Find optimal balance for specific dataset
 
 6. `Error-Correcting Codes`
+
 **Concept**: Improve robustness to noise and misclassifications.
+
 **Implementation**:
 - Encode class labels using error-correcting codes
 - Train model to predict these codes instead of raw labels
 - Adds redundancy for better fault tolerance
 
 7. `MicroHD Optimization`
+
 **Concept**: Systematic hyperparameter tuning for accuracy.
+
 **Implementation**:
 - Apply MicroHD to explore hyperparameter space
 - Optimize dimensionality, encoding functions etc.
