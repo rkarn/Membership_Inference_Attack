@@ -12,7 +12,7 @@ Membership Inference Attacks (MIAs) pose a significant threat to the privacy of 
 
 To reproduce the outcomes given for ISCAS85+EPFL benchmark, please run the parser script given in `GNN_ISCAS85+EPFL_Membership_Inference_Attack.ipynb`. This will create the csv file. Once the csv file is created then the scripts in `HDC_Membership_Inference_Attack_Circuits.ipynb` and `Membership_Inference_DT_Circuits.ipynb` could run. 
 
-#### Dependency:
+#### Dependencies:
 - DGL
 - Keras
 - Pytorch
