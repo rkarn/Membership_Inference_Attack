@@ -20,69 +20,47 @@ To reproduce the outcomes given for ISCAS85+EPFL benchmark, please run the parse
 - ISCAS85+EPFL Benchmark Suite from `https://github.com/jpsety/verilog_benchmark_circuits`
 - MNIST dataset
 
-### For reading only: Variants of HDC (Optimization Techniques) for Improving Accuracy
+### For reading only: Prior-arts Comparision
 
-1. `Iterative Retraining and Regenerative Training`
+| Study | Target Model(s) | Key Contributions |
+|-------|-----------------|-------------------|
+| [Shokri et al. (2017)](#shokri2017membership) | NNs | Pioneered the shadow model approach for MIAs in deep learning systems |
+| [Hu et al. (2021)](#hu2021membership) | NNs, DTs, SVMs | Established a taxonomy of MIA techniques and defensive countermeasures |
+| [Nasr et al. (2018)](#nasr2018machine) | NNs | Developed adversarial regularization methods for MIA mitigation |
+| [Wu et al. (2025)](#wu2025membership) | Large Language Models | Characterized privacy risks in transformer-based architectures |
+| [Zhang et al. (2024)](#zhang2024survey) | DTs, SVMs | Analyzed vulnerability patterns in classical ML algorithms |
+| **Ours** | **Hyperdimensional Computing** | First comprehensive MIA analysis of HDC models with architectural defenses |
 
-**Concept**: Iteratively refine the class hypervectors by retraining the model on misclassified samples or regenerating the hypervectors to better represent the data.
+## Prior Art
 
-**Implementation**:
-- After the initial training, identify misclassified samples
-- Update the class hypervectors by incorporating these samples with higher weights
-- Helps the model adapt to challenging cases
+MIAs have been thoroughly investigated across conventional ML paradigms, including NNs, DTs, and SVMs. As evidenced in the table above, existing literature has focused mainly on parametric models, leaving emerging computing paradigms such as HDC unexplored. To the best of our knowledge, our work bridges this critical gap by presenting the first systematic study of MIAs on HDC models, while simultaneously analyzing architectural variants and proposing targeted defenses.
 
-2. `Adaptive Encoding`
+## References
 
-**Concept**: Use adaptive encoding techniques to better capture the structure of the data (e.g., data-driven projections instead of random projections).
+<a id="shokri2017membership"></a>
+**Shokri, R., Stronati, M., Song, C., & Shmatikov, V. (2017)**  
+"Membership inference attacks against machine learning models"  
+*2017 IEEE Symposium on Security and Privacy (SP)*, 3-18. IEEE.
 
-**Implementation**:
-- Apply Principal Component Analysis (PCA) or other dimensionality reduction techniques
-- Preprocess the data before encoding into hypervectors
-- Ensures most informative features are emphasized
+<a id="hu2021membership"></a>
+**Hu, H., Salcic, Z., Sun, L., et al. (2021)**  
+"Membership inference attacks on machine learning: A survey"  
+*ACM Computing Surveys (CSUR)*, 54(11s), 1-37.
 
-3. `Hybrid Models`
+<a id="nasr2018machine"></a>
+**Nasr, M., Shokri, R., & Houmansadr, A. (2018)**  
+"Machine learning with membership privacy using adversarial regularization"  
+*Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security*, 634-646.
 
-**Concept**: Combine HDC with other machine learning models to leverage their strengths.
+<a id="wu2025membership"></a>
+**Wu, H., & Cao, Y. (2025)**  
+"Membership Inference Attacks on Large-Scale Models: A Survey"  
+*arXiv preprint arXiv:2503.19338*
 
-**Implementation**:
-- Train a lightweight neural network for feature extraction
-- Use the neural network's output as input to HDC model
-- Retains HDC efficiency while boosting accuracy
+<a id="zhang2024survey"></a>
+**Zhang, M., Ren, Z., Wang, Z., et al. (2024)**  
+"A Survey on Membership Inference Attacks and Defenses in Machine Learning"  
+*Journal of Information and Intelligence*, 2(5), 404-454. Elsevier.
 
-4. `Higher-Order Representations`
-
-**Concept**: Incorporate higher-order interactions between features.
-
-**Implementation**:
-- Bind groups of features together before encoding
-- Use element-wise multiplication or XOR operations
-- Captures feature interactions for better classification
-
-5. `Dimensionality Optimization`
-
-**Concept**: Optimize hypervector dimensionality for accuracy/efficiency trade-off.
-
-**Implementation**:
-- Experiment with different dimensions (10K, 20K, etc.)
-- Higher dimensions improve accuracy but increase compute cost
-- Find optimal balance for specific dataset
-
-6. `Error-Correcting Codes`
-
-**Concept**: Improve robustness to noise and misclassifications.
-
-**Implementation**:
-- Encode class labels using error-correcting codes
-- Train model to predict these codes instead of raw labels
-- Adds redundancy for better fault tolerance
-
-7. `MicroHD Optimization`
-
-**Concept**: Systematic hyperparameter tuning for accuracy.
-
-**Implementation**:
-- Apply MicroHD to explore hyperparameter space
-- Optimize dimensionality, encoding functions etc.
-- Maintain efficiency while maximizing accuracy
 
 
