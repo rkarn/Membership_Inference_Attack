@@ -31,11 +31,9 @@ To reproduce the outcomes given for ISCAS85+EPFL benchmark, please run the parse
 | [Zhang et al. (2024)](#zhang2024survey) | DTs, SVMs | Analyzed vulnerability patterns in classical ML algorithms |
 | **Ours** | **Hyperdimensional Computing** | First comprehensive MIA analysis of HDC models with architectural defenses |
 
-## Prior Art
-
 MIAs have been thoroughly investigated across conventional ML paradigms, including NNs, DTs, and SVMs. As evidenced in the table above, existing literature has focused mainly on parametric models, leaving emerging computing paradigms such as HDC unexplored. To the best of our knowledge, our work bridges this critical gap by presenting the first systematic study of MIAs on HDC models, while simultaneously analyzing architectural variants and proposing targeted defenses.
 
-## References
+### References
 
 <a id="shokri2017membership"></a>
 **Shokri, R., Stronati, M., Song, C., & Shmatikov, V. (2017)**  
